@@ -1,0 +1,47 @@
+@font-face{font-family:Vazirmatn;src:url('assets/fonts/Vazirmatn.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+.language-switch{display:flex;align-items:center;gap:9px;font:500 .875rem/1.5 Vazirmatn,Arial,sans-serif;white-space:nowrap;order:3;flex-shrink:0}
+.language-switch a{padding:8px 4px;min-height:40px;display:inline-flex;align-items:center;color:var(--muted)}
+.language-switch a[aria-current]{color:var(--gold);border-bottom:1px solid var(--gold)}
+.language-switch span{color:#ffffff50}
+.site-header{gap:20px}.site-header #navigation{gap:20px}
+.original-title{display:block;font:400 .95rem/1.65 Arial,sans-serif;color:var(--muted);margin-top:12px;text-align:left;unicode-bidi:isolate}
+[lang=fa]{--sans:Vazirmatn,Tahoma,Arial,sans-serif;--serif:Vazirmatn,Tahoma,Arial,sans-serif}
+html[lang=fa] body{font-family:var(--sans);line-height:2}
+html[lang=fa] h1,html[lang=fa] h2,html[lang=fa] h3,html[lang=fa] h4,html[lang=fa] em{font-family:var(--sans);font-style:normal;letter-spacing:normal!important;line-height:1.65;font-weight:600}
+html[lang=fa] .eyebrow,html[lang=fa] .hero-paths a,html[lang=fa] .site-header nav,html[lang=fa] .card-foot,html[lang=fa] .journal,html[lang=fa] .world-top,html[lang=fa] .hero-socials,html[lang=fa] .hero-bottom,html[lang=fa] .timeline span,html[lang=fa] .milestone>span{letter-spacing:normal!important}
+html[lang=fa] main>section:not(.hero) h2{font-size:clamp(1.85rem,3.2vw,2.75rem);line-height:1.8}
+html[lang=fa] .hero h1{font-family:var(--sans);font-size:clamp(2.5rem,5.5vw,4.3rem);font-weight:600;line-height:1.6}
+html[lang=fa] .hero h1 em{font-weight:400;color:var(--gold)}
+html[lang=fa] .hero-line{letter-spacing:normal;font-size:1.2rem;line-height:1.9}
+html[lang=fa] .hero-intro{font-size:1.05rem;line-height:2.1;max-width:640px}
+html[lang=fa] .hero-content .eyebrow{font-size:.875rem;line-height:2}
+html[lang=fa] .hero-bottom a{text-align:end}
+html[lang=fa] .hero-paths a{border-left:0;border-right:1px solid #ffffff88;font-size:1rem}
+html[lang=fa] .hero-paths a:first-child{border-right:0}
+html[lang=fa] .credential-row>div{border-left:0;border-right:1px solid var(--line)}
+html[lang=fa] .credential-row>div:first-child{border-right:0;padding-right:0;padding-left:30px}
+html[lang=fa] .research-card{border-left:0;border-right:1px solid var(--line)}
+html[lang=fa] .research-card:first-child{border-right:0}
+html[lang=fa] .research-card h3{line-height:1.8}
+html[lang=fa] .paper h4{line-height:1.95;font-size:1.15rem}
+html[lang=fa] .authors{font-family:Arial,sans-serif;text-align:left;unicode-bidi:isolate;line-height:1.8}
+html[lang=fa] .timeline{border-left:0;border-right:1px solid #e6ba8355;padding:0 25px 0 0}
+html[lang=fa] .timeline li:before{left:auto;right:-29px}
+html[lang=fa] .vh-services article{border-left:0;border-right:1px solid var(--line)}
+html[lang=fa] .vh-services article:first-child{border-right:0}
+html[lang=fa] .vh-tagline{font-style:normal;line-height:1.9}
+html[lang=fa] .vh-heading h2{letter-spacing:normal!important;font-size:clamp(2.3rem,4.5vw,3.5rem)!important;margin-bottom:0}
+.vh-english-name{font-family:Georgia,serif;color:var(--gold);font-size:1.1rem;letter-spacing:.1em;margin-bottom:22px}
+html[lang=fa] .vh-monogram,html[lang=fa] .world-card h3{font-family:Georgia,serif;direction:ltr;text-align:right}
+html[lang=fa] .vh-monogram{text-align:center}
+html[lang=fa] .video-topic{font-size:2rem;line-height:1.8;letter-spacing:normal}
+html[lang=fa] .video-topic em{font-size:1em}
+html[lang=fa] .world-card p{min-height:0;line-height:2.05}
+html[lang=fa] .contact-section h2{font-size:clamp(1.9rem,3.5vw,3rem)!important}
+.contact-email,.world-handle{direction:ltr;unicode-bidi:isolate}
+html[lang=fa] .world-handle{text-align:right}
+html[lang=fa] .eyebrow,html[lang=fa] .badge,html[lang=fa] .journal,html[lang=fa] .card-foot{font-size:.875rem}
+html[lang=fa] .vh-services p:last-child,html[lang=fa] .timeline p,html[lang=fa] .milestone p,html[lang=fa] .teaching-list p{font-size:1rem}
+@media(max-width:1100px){.site-header{height:78px;padding-inline:20px;gap:16px}.site-header .brand{margin-inline-end:auto}.menu-toggle{display:block;order:4;background:transparent;border:1px solid var(--line);padding:7px 12px;color:var(--text);font-size:.875rem;border-radius:3px}.site-header #navigation{display:none;position:absolute;top:78px;left:0;right:0;background:#111b28;border-bottom:1px solid var(--line);padding:24px;align-items:stretch;gap:14px}.site-header #navigation.open{display:flex;flex-direction:column}.site-header #navigation a{padding:6px}}
+@media(max-width:1000px){html[lang=fa] .research-card,html[lang=fa] .vh-services article{border-right:0}}
+@media(max-width:760px){.site-header{height:70px;gap:12px}.site-header #navigation{top:70px}.language-switch{gap:6px}.language-switch a{padding:7px 3px}html[lang=fa] .hero-paths a{border-right:0}html[lang=fa] .hero-bottom a{text-align:start}html[lang=fa] .credential-row>div,html[lang=fa] .credential-row>div:first-child{border-right:0;padding:20px 0}html[lang=fa] .hero-content{padding-bottom:125px}html[lang=fa] .hero h1{font-size:2.75rem}html[lang=fa] .hero-content .eyebrow{max-width:320px}html[lang=fa] .vh-roadmap ol{grid-template-columns:1fr}html[lang=fa] main>section:not(.hero) h2{font-size:1.8rem}html[lang=fa] .contact-section h2{font-size:1.8rem!important}}
