@@ -15,23 +15,24 @@ const home=document.querySelector('#home');
 const toolbar=document.querySelector('.view-toolbar');
 const viewLinks=document.querySelector('.view-links');
 const groups=isPersian?{
- research:[['about','دربارهٔ من'],['research','پژوهش و مقالات'],['journey','تجربه‌ها و مهارت‌ها']],
- science:[['stories','ویدئوها']],
- teaching:[['teaching','تدریس و مشاوره']],
- communities:[['beyond','FilYc و TR']],
- business:[['vellum-house','ولوم هاوس']],
+ about:[['about','دربارهٔ من']],
+ research:[['research','حوزه‌های پژوهشی'],['publications','مقالات'],['journey','سوابق پژوهشی'],['achievements','دستاوردها'],['skills','مهارت‌ها']],
+ science:[['stories','ویدئوهای علمی'],['filyc','فیلم و فیزیک | FilYc'],['tr-bookclub','باشگاه کتاب TR']],
+ teaching:[['teaching','آموزش آنلاین'],['teaching-approach','تجربه و رویکرد آموزشی'],['teaching-consultation','ارزیابی و مشاوره']],
+ business:[['vellum-house','آشنایی با ولوم هاوس'],['vh-services','خدمات'],['vh-roadmap','مسیر همکاری'],['vh-consultation','مشاورهٔ اولیه']],
  contact:[['contact','تماس']]
 }:{
-  research:[['about','About'],['research','Research & Papers'],['journey','Experience & Skills']],
-  science:[['stories','Videos']],
- teaching:[['teaching','Teaching & Consultation']],
- communities:[['beyond','FilYc & TR']],
-  business:[['vellum-house','Vellum House']],
-  contact:[['contact','Contact']]
+ about:[['about','About Me']],
+ research:[['research','Research Areas'],['publications','Publications'],['journey','Research Experience'],['achievements','Achievements'],['skills','Skills']],
+ science:[['stories','Science Videos'],['filyc','Film & Physics · FilYc'],['tr-bookclub','TR Book Club']],
+ teaching:[['teaching','Online Teaching'],['teaching-approach','Experience & Approach'],['teaching-consultation','Assessment & Consultation']],
+ business:[['vellum-house','Overview'],['vh-services','Services'],['vh-roadmap','The Roadmap'],['vh-consultation','Initial Consultation']],
+ contact:[['contact','Contact']]
 };
 function showView(moveFocus=false){
   const id=location.hash.slice(1)||'home';
-  const target=sections.find(section=>section.id===id);
+  const anchor=document.getElementById(id);
+  const target=anchor?.closest('main>section[data-view]');
   const view=target?.dataset.view;
   home.hidden=Boolean(view);
   sections.forEach(section=>{section.hidden=section.dataset.view!==view;});
@@ -44,16 +45,17 @@ function showView(moveFocus=false){
     viewLinks.append(link);
   });
   nav.querySelectorAll('a[href^="#"]').forEach(link=>{
-    if(link.getAttribute('href')==='#'+id)link.setAttribute('aria-current','location');
+    const linkedSection=document.getElementById(link.hash.slice(1))?.closest('main>section[data-view]');
+    if(view && linkedSection?.dataset.view===view)link.setAttribute('aria-current','location');
     else link.removeAttribute('aria-current');
   });
   closeMenu();
   if(moveFocus){
-    const element=target||home;
-    const heading=element.querySelector('h1,h2');
+    const element=(target && anchor)||home;
+    const heading=element.matches('h1,h2,h3,h4')?element:element.querySelector('h1,h2,h3,h4');
     if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
     requestAnimationFrame(()=>{
-      if(target){target.scrollIntoView({block:'start',behavior:'instant'});}
+      if(target){element.scrollIntoView({block:'start',behavior:'instant'});}
       else window.scrollTo({top:0,behavior:'instant'});
     });
   }

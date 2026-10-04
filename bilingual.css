@@ -51,3 +51,7 @@ html[lang=fa] .vh-services p:last-child,html[lang=fa] .timeline p,html[lang=fa] 
 .teaching-enquiry{margin:42px auto 0;padding:30px;border:1px solid #ead0a64d;background:#ead0a608;max-width:100%}.teaching-enquiry h3{margin-bottom:20px;line-height:1.5}.teaching-enquiry p{max-width:850px}.teaching-enquiry .small{margin:16px 0 0}
 @media(max-width:1100px){.site-header{height:78px;padding-block:0}.site-header #navigation{max-width:none;max-height:calc(100svh - 78px);overflow-y:auto;flex-wrap:nowrap;justify-content:flex-start}}
 @media(max-width:760px){.site-header{height:70px;min-height:70px}.site-header #navigation{max-height:calc(100svh - 70px)}.teaching-enquiry{padding:24px 18px}.teaching-enquiry .button{width:100%;text-align:center}}
+
+/* Internal section navigation within each main category. */
+main [id]{scroll-margin-top:120px}.view-toolbar{align-items:flex-start}.view-links{gap:12px 22px}.view-links a{line-height:1.7}.site-header #navigation{gap:10px 18px}
+@media(max-width:760px){main [id]{scroll-margin-top:90px}.view-links{gap:10px 16px}}
