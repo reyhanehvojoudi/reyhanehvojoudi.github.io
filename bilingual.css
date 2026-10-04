@@ -55,3 +55,17 @@ html[lang=fa] .vh-services p:last-child,html[lang=fa] .timeline p,html[lang=fa] 
 /* Internal section navigation within each main category. */
 main [id]{scroll-margin-top:120px}.view-toolbar{align-items:flex-start}.view-links{gap:12px 22px}.view-links a{line-height:1.7}.site-header #navigation{gap:10px 18px}
 @media(max-width:760px){main [id]{scroll-margin-top:90px}.view-links{gap:10px 16px}}
+
+/* Social destinations: YouTube leads, immediately below the introduction. */
+.social-icons{display:flex;align-items:center;justify-content:center;gap:14px;direction:ltr}
+.hero-socials.social-icons{margin:0 auto 28px;letter-spacing:normal}
+.social-icons a.social-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:48px;height:48px;padding:0;border:1px solid #ffffff55;border-radius:50%;background:#15202ee6;color:#f7f3ec;transition:transform .18s,background .18s,border-color .18s;--play-fill:#15202e}
+.social-icons a.social-youtube{width:66px;height:54px;border-radius:17px;background:#dc2638;border-color:#ff6a76;box-shadow:0 6px 24px #dc263833;--play-fill:#dc2638}
+.social-youtube svg{width:33px;height:33px}
+.social-icons a:hover{transform:translateY(-3px);border-color:#ead0a6;background:#2b3748}
+.social-icons a.social-youtube:hover{background:#b91e2d;--play-fill:#b91e2d;border-color:#ff9ba4}
+.social-icons a:focus-visible{outline:3px solid #ead0a6;outline-offset:5px}
+.about-links.social-links,.contact-links.social-links{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.social-links .social-icons{flex-wrap:nowrap}
+@media(max-width:380px){.social-icons{gap:11px}}
+@media(prefers-reduced-motion:reduce){.social-icons a.social-icon{transition:none}.social-icons a:hover{transform:none}}
