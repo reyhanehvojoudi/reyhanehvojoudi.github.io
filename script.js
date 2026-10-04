@@ -16,12 +16,16 @@ const toolbar=document.querySelector('.view-toolbar');
 const viewLinks=document.querySelector('.view-links');
 const groups=isPersian?{
  research:[['about','دربارهٔ من'],['research','پژوهش و مقالات'],['journey','تجربه‌ها و مهارت‌ها']],
- science:[['stories','ویدئوها'],['teaching','تدریس'],['beyond','FilYc و TR']],
+ science:[['stories','ویدئوها']],
+ teaching:[['teaching','تدریس و مشاوره']],
+ communities:[['beyond','FilYc و TR']],
  business:[['vellum-house','ولوم هاوس']],
  contact:[['contact','تماس']]
 }:{
   research:[['about','About'],['research','Research & Papers'],['journey','Experience & Skills']],
-  science:[['stories','Videos'],['teaching','Teaching'],['beyond','FilYc & TR']],
+  science:[['stories','Videos']],
+ teaching:[['teaching','Teaching & Consultation']],
+ communities:[['beyond','FilYc & TR']],
   business:[['vellum-house','Vellum House']],
   contact:[['contact','Contact']]
 };
