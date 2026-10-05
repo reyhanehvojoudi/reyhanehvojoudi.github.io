@@ -69,3 +69,12 @@ main [id]{scroll-margin-top:120px}.view-toolbar{align-items:flex-start}.view-lin
 .social-links .social-icons{flex-wrap:nowrap}
 @media(max-width:380px){.social-icons{gap:11px}}
 @media(prefers-reduced-motion:reduce){.social-icons a.social-icon{transition:none}.social-icons a:hover{transform:none}}
+
+/* A quiet gold compass-like control, clear of mobile safe areas. */
+.back-to-top{position:fixed;right:max(22px,env(safe-area-inset-right));bottom:calc(22px + env(safe-area-inset-bottom));z-index:9;display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid var(--gold);border-radius:50%;background:#111c2bf5;color:var(--gold);box-shadow:0 6px 24px #0005;cursor:pointer;transition:transform .15s ease,background .15s ease,box-shadow .15s ease}
+.back-to-top[hidden]{display:none}
+.back-to-top:hover{background:#253145;transform:translateY(-3px);box-shadow:0 8px 26px #0007}
+.back-to-top:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.back-to-top:active{transform:translateY(0)}
+@media(max-width:760px){.back-to-top{right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}.back-to-top:hover{transform:none}}
