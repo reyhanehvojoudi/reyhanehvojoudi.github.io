@@ -2,36 +2,32 @@
   'use strict';
   const fa = document.documentElement.lang === 'fa';
   const t = fa ? {
-    title:'شروع یک گفت‌وگو',intro:'چند خط دربارهٔ درخواست خود بنویسید. نیازی به ورود به حساب گوگل نیست.',
-    name:'نام و نام خانوادگی',email:'ایمیل',phone:'شمارهٔ تماس با کد کشور',topic:'موضوع درخواست',
-    message:'چطور می‌توانم کمک کنم؟',zone:'شهر / منطقهٔ زمانی (اختیاری)',close:'بستن',send:'ارسال درخواست',sending:'در حال ارسال…',
-    privacy:'اطلاعات شما برای پاسخ‌گویی به درخواستتان به ریحانه ارسال و در فایل خصوصی پیگیری درخواست‌ها در گوگل شیت ذخیره می‌شود.',
-    required:'همهٔ فیلدها به‌جز شهر / منطقهٔ زمانی ضروری هستند.',
-    success:'درخواست شما ثبت شد. ریحانه از طریق اطلاعات تماس شما پیگیری می‌کند.',
-    error:'تأیید دریافت ممکن نشد. اطلاعات شما در این فرم باقی مانده است؛ دوباره تلاش کنید. اگر درخواست قبلاً ثبت شده باشد، تکراری ثبت نمی‌شود.',
-    setup:'فرم هنوز فعال نشده است. لطفاً فعلاً از طریق تلگرام تماس بگیرید.',telegram:'تماس در تلگرام',
+    title:'شروع یک گفت‌وگو',intro:'برای شروع، کمی دربارهٔ درخواستتان بنویسید.',
+    name:'نام و نام خانوادگی',email:'آدرس ایمیل',phone:'شمارهٔ تماس با کد کشور',topic:'موضوع درخواست',
+    message:'توضیحات شما',zone:'شهر / منطقهٔ زمانی (اختیاری)',close:'بستن',send:'ارسال درخواست',sending:'در حال ارسال…',
+    success:'سپاسگزارم، درخواست شما ثبت شد. برای هماهنگی با شما تماس می‌گیرم.',
+    error:'دریافت درخواست شما تأیید نشد. لطفاً دوباره روی «ارسال درخواست» بزنید یا از طریق تلگرام تماس بگیرید.',
+    setup:'فرم در حال حاضر در دسترس نیست. لطفاً از طریق تلگرام تماس بگیرید.',telegram:'تماس در تلگرام',
     invalid:'لطفاً شمارهٔ تماس را همراه با کد کشور وارد کنید.',
-    types:{general:'درخواست عمومی',teaching:'کلاس آنلاین / ارزیابی اولیه',vellum:'مشاورهٔ ولوم هاوس',collaboration:'همکاری / رویداد علمی'},
-    hints:{general:'در چند جمله درخواست خود را توضیح دهید.',teaching:'درس، مقطع یا سطح فعلی، هدف و زمان‌های مناسب خود را بنویسید.',vellum:'مقطع تحصیلی، هدف و مهلت‌های مهم را بنویسید. اگر برای فرد دیگری درخواست می‌دهید، نسبت خود را ذکر کنید.',collaboration:'نوع همکاری، موضوع و تاریخ یا مهلت پیشنهادی را بنویسید.'}
+    types:{general:'سایر درخواست‌ها',teaching:'کلاس آنلاین / ارزیابی اولیه',vellum:'مشاورهٔ ولوم هاوس',collaboration:'همکاری / رویداد علمی'},
+    hints:{general:'در چند جمله بنویسید چه کمکی از من برمی‌آید.',teaching:'درس یا زبان موردنظر، سطح فعلی، هدف و زمان‌های مناسب برای کلاس را بنویسید.',vellum:'مقطع تحصیلی، هدف و مهلت‌های مهم را بنویسید. اگر برای شخص دیگری درخواست می‌دهید، نسبت خود را با او ذکر کنید.',collaboration:'نوع همکاری، موضوع و تاریخ یا مهلت پیشنهادی را بنویسید.'}
   } : {
-    title:'Let’s start a conversation',intro:'Tell me a little about your enquiry. No Google sign-in needed.',
-    name:'Full name',email:'Email address',phone:'Phone number with country code',topic:'What can I help with?',
-    message:'A few details',zone:'City / time zone (optional)',close:'Close',send:'Send enquiry',sending:'Sending…',
-    privacy:'Your details are sent to Reyhaneh and stored in a private Google Sheet to respond to and track your enquiry.',
-    required:'All fields except city / time zone are required.',
-    success:'Your enquiry has been received. Reyhaneh will follow up using your contact details.',
-    error:'We could not confirm receipt. Your details are still in this form; please try again. If already received, your enquiry will not be recorded twice.',
-    setup:'This form is not activated yet. Please contact me on Telegram for now.',telegram:'Contact on Telegram',
+    title:'Let’s start a conversation',intro:'Share a few details about how I can help.',
+    name:'Full name',email:'Email address',phone:'Phone number (with country code)',topic:'Enquiry type',
+    message:'Your message',zone:'City / time zone (optional)',close:'Close',send:'Send enquiry',sending:'Sending…',
+    success:'Thank you—your enquiry has been received. I’ll be in touch to discuss the next steps.',
+    error:'We couldn’t confirm your submission. Please click “Send enquiry” again or contact me on Telegram.',
+    setup:'The form is currently unavailable. Please contact me on Telegram.',telegram:'Contact on Telegram',
     invalid:'Please enter a phone number including your country code.',
     types:{general:'General enquiry',teaching:'Online classes / initial assessment',vellum:'Vellum House consultation',collaboration:'Collaboration / science event'},
-    hints:{general:'Briefly tell me what you have in mind.',teaching:'Subject, education stage or current level, learning goal, and preferred availability.',vellum:'Student’s education stage, goals and important deadlines. If enquiring for someone else, mention your relationship.',collaboration:'Type of collaboration, topic, and proposed date or deadline.'}
+    hints:{general:'Briefly tell me what you have in mind.',teaching:'Which subject or language? Include your current level, learning goal and preferred class times.',vellum:'Share the student’s education stage, goals and any deadlines. If enquiring for someone else, mention your relationship.',collaboration:'Briefly describe your project or event and include any proposed dates or deadlines.'}
   };
   const dialog = document.createElement('dialog');
   dialog.className = 'enquiry-dialog';
   dialog.setAttribute('aria-labelledby','enquiry-title');
   dialog.innerHTML = `<button type="button" class="enquiry-close" aria-label="${t.close}">×</button>
     <h2 id="enquiry-title">${t.title}</h2><p>${t.intro}</p>
-    <form class="enquiry-form"><p class="small">${t.required}</p>
+    <form class="enquiry-form">
       <div class="enquiry-grid">
         <label>${t.name}<input name="name" autocomplete="name" required maxlength="100"></label>
         <label>${t.email}<input name="email" type="email" autocomplete="email" dir="ltr" required maxlength="180"></label>
@@ -42,7 +38,6 @@
       <label>${t.message}<textarea name="message" rows="3" required maxlength="2500" aria-describedby="enquiry-hint"></textarea></label>
       <p id="enquiry-hint" class="small"></p>
       <div class="enquiry-trap" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
-      <p class="small enquiry-privacy">${t.privacy}</p>
       <button class="button primary" type="submit">${t.send}</button>
     </form><p class="enquiry-status" role="status" aria-live="polite" tabindex="-1"></p>
     <a class="enquiry-fallback text-link" href="https://t.me/Reysics" target="_blank" rel="noopener noreferrer" hidden>${t.telegram}</a>`;
