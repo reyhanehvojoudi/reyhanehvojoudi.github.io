@@ -18,14 +18,14 @@ const groups=isPersian?{
  about:[['about','دربارهٔ من']],
  research:[['research','حوزه‌های پژوهشی'],['publications','مقالات'],['journey','سوابق پژوهشی'],['achievements','دستاوردها'],['skills','مهارت‌ها']],
  science:[['stories','ویدئوهای علمی'],['filyc','فیلم و فیزیک | FilYc'],['tr-bookclub','باشگاه کتاب TR']],
- teaching:[['teaching','آموزش آنلاین'],['teaching-approach','تجربه و رویکرد آموزشی'],['teaching-consultation','ارزیابی و مشاوره']],
+ teaching:[['teaching','تدریس و دوره‌ها'],['teaching-approach','تجربه و رویکرد آموزشی'],['teaching-consultation','ارزیابی و مشاوره']],
  business:[['vellum-house','آشنایی با ولوم هاوس'],['vh-services','خدمات'],['vh-roadmap','مسیر همکاری'],['vh-consultation','مشاورهٔ اولیه']],
  contact:[['contact','تماس']]
 }:{
  about:[['about','About Me']],
  research:[['research','Research Areas'],['publications','Publications'],['journey','Research Experience'],['achievements','Achievements'],['skills','Skills']],
  science:[['stories','Science Videos'],['filyc','Film & Physics · FilYc'],['tr-bookclub','TR Book Club']],
- teaching:[['teaching','Online Teaching'],['teaching-approach','Experience & Approach'],['teaching-consultation','Assessment & Consultation']],
+ teaching:[['teaching','Teaching & Courses'],['teaching-approach','Experience & Approach'],['teaching-consultation','Assessment & Consultation']],
  business:[['vellum-house','Overview'],['vh-services','Services'],['vh-roadmap','The Roadmap'],['vh-consultation','Initial Consultation']],
  contact:[['contact','Contact']]
 };
